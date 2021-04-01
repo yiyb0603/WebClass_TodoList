@@ -1,0 +1,37 @@
+.TodoInput {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--black);
+	padding: 0.2rem;
+
+	&:focus-within {
+		color: var(--white);
+		border-bottom: 1px solid var(--white);
+	}
+
+	&-Input {
+		background: none;
+		outline: none;
+		border: none;
+		font-size: 1rem;
+		color: var(--white);
+
+		&::placeholder {
+			color: var(--black);
+		}
+
+		&:focus {
+			&::placeholder {
+				color: var(--white);
+			}
+		}
+	}
+
+	&-Send {
+		font-size: 1.2rem;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,14 @@
+.TodoList {
+	position: relative;
+	width: 450px;
+	height: 500px;
+	margin: auto;
+	border: 2px solid var(--white);
+	border-radius: 25px;
+
+	&-ContentBox {
+		padding: 0.5rem;
+		height: 85%;
+		overflow-y: auto;
+	}
+}
