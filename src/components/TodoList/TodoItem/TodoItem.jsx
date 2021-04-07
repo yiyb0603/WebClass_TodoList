@@ -72,7 +72,7 @@ const TodoItem = ({ id, index, text, isCompleted, setTodos }) => {
   }, [isModify, onOutSideClick]);
 
   return (
-    <div className={cx('TodoItem')}>
+    <div className={cx('TodoItem')} ref={modifyRef}>
       <div className={cx('TodoItem-Contents')}>
         <div className={cx('TodoItem-Contents-Index')}>{index}. </div>
       {
@@ -83,7 +83,6 @@ const TodoItem = ({ id, index, text, isCompleted, setTodos }) => {
           value={modifyValue}
           onChange={onChangeModifyValue}
           onKeyDown={onKeydownModifyValue}
-          ref={modifyRef}
         />
         :
         <div className={cx('TodoItem-Text', {
